@@ -14,6 +14,13 @@ class PagesController < ApplicationController
     render({ :template => "pages_templates/payment"})
   end
   def payment_results
+    @apr= params.fetch("users_number1").to_f
+    @num_year= params.fetch("users_number2").to_i
+    @principal= params.fetch("users_number3").to_f
+    @num_period = @num_year*12
+    @apr_perc=@apr/100
+    @r = @apr_perc/12
+    @the_results= (@r * @principal) / (1-((1+@r)** (-@num_period)))
     render({ :template => "pages_templates/payment_results"})
   end
   
