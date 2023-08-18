@@ -5,8 +5,11 @@ class PagesController < ApplicationController
   def square
     render({ :template => "pages_templates/square"})
   end
-  def square_root
+  def square_results
     render({ :template => "pages_templates/square_results"})
+  end
+  def square_root
+    render({ :template => "pages_templates/square_root"})
   end
   def square_root_results
     render({ :template => "pages_templates/square_root_results"})
