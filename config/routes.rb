@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   get("/", { :controller => "pages", :action => "home" })
-  get("/", { :controller => "pages", :action => "square" })
+  get("/square", { :controller => "pages", :action => "square" })
 end
