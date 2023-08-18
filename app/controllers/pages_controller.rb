@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def square
     render({ :template => "pages_templates/square"})
   end
-  def square_results
+  def square_root
     render({ :template => "pages_templates/square_results"})
   end
   def square_root_results
